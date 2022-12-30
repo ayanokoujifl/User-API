@@ -17,12 +17,12 @@ public class UserController {
 
 	@Autowired
 	UserService service;
-	
+
 	@GetMapping
-	public List<User> findAll(){
+	public List<User> findAll() {
 		return service.findAll();
 	}
-	
+
 	@GetMapping(value = "/{id}")
 	public User findById(@PathVariable Integer id) {
 		return service.findById(id);
