@@ -9,23 +9,17 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Getter
-	@Setter
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Getter
-	@Setter
 	private String username;
-	@Getter
-	@Setter
 	private String email;
-	@Getter
-	@Setter
 	private String senha;
 
 	public User() {
